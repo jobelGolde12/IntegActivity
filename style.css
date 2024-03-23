@@ -1,0 +1,324 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* 1F2544 */
+:root{
+    --bg-primary: #333;
+    --color-primary: #fff;
+    --color-secondary: #333;
+    --bg-secondary: #f5f5f5f5;
+    --color-tri: darkorange;
+    --bg-tri: darkorange;
+    --bg-hover: orange;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    background: var(--bg-primary);
+    overflow-x: hidden;
+}
+.text-light{
+    color:var(--color-primary);
+}
+
+.header{
+    background: transparent;
+    width: 100vw;
+    height: 10%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+.header .logo{
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 3rem;
+}
+.header .logo span{
+    color: var(--color-tri);
+}
+.header .links a{
+    text-decoration: none;
+    color: var(--color-primary);
+    margin-right: 1.5rem;
+    font-size: 1.3rem;
+}
+.header .links a:hover{
+    color: va(--color-tri);
+}
+
+.header .links .bi-envelope{
+    margin-right: 6rem;
+}
+
+#main-content{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    overflow-y: hidden;
+    
+}
+
+#main-content .left-content{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    padding-top: 9rem;
+    padding-left: 3rem;
+}
+#main-content .left-content h1{
+    color: var(--color-tri);
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+#main-content .left-content p{
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+#main-content .left-content #seeProjects{
+    padding: .5rem 1rem;
+    border: none;
+    background: var(--bg-tri);
+    color: var(--color-primary);
+    margin-top: 1rem;
+    cursor: pointer;
+
+}
+
+#main-content .left-content #seeProjects:hover{
+    background: var(--bg-hover);
+}
+
+#main-content .right-content{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+}
+ .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: darkcyan;
+    animation: animateCircle 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 999;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-content{
+    position: relative;
+    animation: animateCircleContent 1s ease forwards;
+    animation-delay: 3s;
+}
+
+@keyframes animateCircleContent{
+    from{
+        display: block;
+    }
+    to{
+        display: none;
+    }
+}
+@keyframes animateCircle{
+    from{
+        width: 100vw;
+        height: 100vh;
+
+    }
+    to{
+        position: absolute;
+        width: 30%;
+        height: 55%;
+        border-radius: 50%;
+        background: cyan;
+        left: 62%;
+        top: 20%;
+        box-shadow: 0 0 10px cyan;
+        z-index: 1;
+    }
+}
+
+#main-content .right-content img{
+    width: 50%;
+    aspect-ratio: 19/35;
+    position: relative;
+    z-index: 2;
+    right: -25%;
+    top: 0;
+   
+}
+
+/* @keyframes animateImg{
+    from{
+        display:none;
+    }
+    to{
+        display: block;
+    }
+} */
+#information{
+    background: var(--bg-primary);
+    top: 100%;
+    position: absolute;
+    padding: 1rem;
+    color: var(--color-primary);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#information .firstH1{
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+#information .firstH1 span{
+    color: var(--color-tri);
+}
+#information .information-top-info{
+    margin-top: 1rem;
+}
+#information .information-container{
+    position: relative;
+    top: 0%;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.information-container .hobbies{
+    position: relative;
+    height:100%;
+}
+.information-container .hobbies ul li{
+    color: var(--color-tri);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.information-container .hobbies h1{
+    margin-bottom: 1rem;
+}
+
+.object1{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: -1;
+    animation: animateObject1 1s ease forwards;
+    animation-delay: 5s;
+}
+
+@keyframes animateObject1{
+    0%{
+        left: 70%;
+        top: 30%;
+        width: 20px;
+        height: 20px;
+    }
+
+    50%{
+        left: 50%;
+        top: 20%;
+        width: 50px;
+        height: 50px;
+    }
+
+    100%{
+        left: 80%;
+        top: 55%;
+        z-index: 5;
+        width: 130px;
+        height: 130px;
+        animation: animateObject1Second 1s ease infinite;
+    }
+
+}
+
+@keyframes animateObject1Second {
+    from{
+        top: 50%;
+    }
+    to{
+        top: 45%;
+    }
+}
+
+
+.object2{
+    position: absolute;
+    top: 45%;
+    left: 80%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: -1;
+    animation: animateObject2 1s ease forwards;
+    animation-delay: 6s;
+}
+
+@keyframes animateObject2{
+    0%{
+        left: 90%;
+        top: 45%;
+        width: 20px;
+        height: 20px;
+    }
+
+    50%{
+        left: 95%;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    100%{
+        left: 60%;
+        top: 18%;
+        z-index: 5;
+        width: 130px;
+        height: 130px;
+        animation: animateObject2Second 1s ease infinite;
+    }
+
+}
+
+
+.footer{
+    width: 100vw;
+    height: 50vh;
+    background: lightgray;
+    position: absolute;
+    top: 200%;
+    border-radius: 50px 70px 0 0;
+    padding: 1.5rem;
+    display:flex;
+    justify-content: space-between;
+}
