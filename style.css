@@ -90,6 +90,9 @@ body{
     font-weight: 900;
     font-size: 2.5rem;
 }
+.first-br{
+    display: none;
+}
 #main-content .left-content p{
     color: var(--color-primary);
     font-size: 1rem;
@@ -164,11 +167,11 @@ body{
 }
 
 #main-content .right-content img{
-    width: 50%;
-    aspect-ratio: 19/35;
+    width: 60%;
+    height: 90%;
     position: relative;
     z-index: 2;
-    right: -25%;
+    right: -20%;
     top: 0;
    
 }
@@ -228,11 +231,12 @@ body{
     left: 70%;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    background: #fff;
+    background: url('laptop3.png');
     z-index: -1;
     animation: animateObject1 1s ease forwards;
     animation-delay: 5s;
+    background-position: center;
+    background-size: cover;
 }
 
 @keyframes animateObject1{
@@ -277,8 +281,9 @@ body{
     left: 80%;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    background: #fff;
+    background: url('6214248.png');
+    background-position: center;
+    background-size: cover;
     z-index: -1;
     animation: animateObject2 1s ease forwards;
     animation-delay: 6s;
@@ -321,4 +326,57 @@ body{
     padding: 1.5rem;
     display:flex;
     justify-content: space-between;
+}
+
+
+@media screen and (max-width: 667px){
+    .header .links{
+        display: none;
+    }
+    #main-content .left-content h1{
+        font-size: 1.5rem;
+    }
+    #main-content .left-content p{
+        font-size: .5rem;
+    }
+    #main-content .left-content .first-br{
+        display: block;
+    }
+
+    .object1{
+        width: 20px;
+        height: 20px;
+    }
+
+
+    
+@keyframes animateCircle{
+    from{
+        width: 100vw;
+        height: 100vh;
+
+    }
+    to{
+        position: absolute;
+        width: 30%;
+        height: 40%;
+        border-radius: 50%;
+        background: cyan;
+        left: 62%;
+        top: 25%;
+        box-shadow: 0 0 10px cyan;
+        z-index: 1;
+    }
+}
+
+#main-content .right-content img{
+        width: 50%;
+        height: 70%;
+        top: 5%;
+}
+    .object1{
+        position: absolute;
+        width: 5px;
+        height: 5px;
+    }
 }
