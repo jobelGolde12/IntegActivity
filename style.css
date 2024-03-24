@@ -322,7 +322,6 @@ body{
     background: lightgray;
     position: absolute;
     top: 200%;
-    border-radius: 50px 70px 0 0;
     padding: 1.5rem;
     display:flex;
     justify-content: space-between;
@@ -359,7 +358,7 @@ body{
     to{
         position: absolute;
         width: 30%;
-        height: 40%;
+        height: 35%;
         border-radius: 50%;
         background: cyan;
         left: 62%;
@@ -379,4 +378,69 @@ body{
         width: 5px;
         height: 5px;
     }
+
+    .header .logo{
+        margin-left: 1rem;
+    }
+    #main-content .left-content{
+        padding-left: 1rem;
+    }
+
+    /* animate the first object  */
+    
+@keyframes animateObject1{
+    0%{
+        left: 70%;
+        top: 30%;
+        width: 20px;
+        height: 20px;
+    }
+
+    50%{
+        left: 50%;
+        top: 20%;
+        width: 50px;
+        height: 50px;
+    }
+
+    100%{
+        left: 85%;
+        top: 50%;
+        z-index: 5;
+        width: 50px;
+        height: 50px;
+        animation: animateObject1Second 1s ease infinite;
+    }
+
+}
+
+
+/* animate the second object  */
+
+@keyframes animateObject2{
+    0%{
+        left: 90%;
+        top: 45%;
+        width: 20px;
+        height: 20px;
+    }
+
+    50%{
+        left: 95%;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    100%{
+        left: 60%;
+        top: 30%;
+        z-index: 5;
+        width: 50px;
+        height: 50px;
+        animation: animateObject2Second 1s ease infinite;
+    }
+
+}
+
 }
